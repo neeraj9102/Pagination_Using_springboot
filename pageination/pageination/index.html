@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espranza Management System</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="running-text">
+            <p>&copy; 2024 Espranza Management System. All rights reserved.</p>
+        </div>
+        <nav>
+            <div class="logo">EMS</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="loginBtn">Login</button>
+                <button id="registerBtn">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent" style="display: none;">
+        <h1>Esperanza Management System</h1>
+        <nav class="slider-menu">
+            <ul>
+                <li><a href="#" class="active" data-section="students">Students</a></li>
+                <li><a href="#" data-section="courses">Courses</a></li>
+                <li><a href="#" data-section="teachers">Teachers</a></li>
+            </ul>
+        </nav>
+
+        <section id="students" class="content-section">
+            <h2>Add New Student</h2>
+            <form id="studentForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <button type="submit">Add Student</button>
+            </form>
+            <div id="studentList">
+                <h3>Student List</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody"></tbody>
+                </table>
+                <div class="pagination">
+                    <button id="prevPage">Previous</button>
+                    <span id="currentPage"></span>
+                    <button id="nextPage">Next</button>
+                </div>
+            </div>
+        </section>
+        <section id="courses" class="content-section" style="display:none;">
+            <h2>Courses</h2>
+            <p>Course management will be implemented here.</p>
+        </section>
+        <section id="teachers" class="content-section" style="display:none;">
+            <h2>Teachers</h2>
+            <p>Teacher management will be implemented here.</p>
+        </section>
+    </main>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="authTitle">Login</h2>
+            <form id="authForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Espranza Management System. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        <form id="studentForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Add Student</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+        </table>
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="currentPage"></span>
+            <button id="nextPage">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>-->
